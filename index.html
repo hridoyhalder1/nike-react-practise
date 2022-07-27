@@ -180,53 +180,7 @@
               </div>
         </section>
 
-        <!-----last section------>
-            <div class="row">
-                <div class="d-flex align-items-center justify-content-between ">
-                    <div class="col">
-                        <div>
-                            <div class=" d-flex align-items-center justify-content-evenly rounded p-3 shadow bg-white ">
-                                <div>
-                                    <img class=" img-fluid w-50" src="icons/image 12.png">
-                                </div>
-                                <div>
-                                    <h2>Find the Perfect Fit</h2>
-                                    <p>Everybody is different, which is why we
-                                        offer styles for every body.</p>
-                                </div>
-                            </div>
-                        </div><br>
-                        <div>
-                            <div class=" d-flex align-items-center justify-content-evenly rounded p-3 shadow bg-white">
-                                <div>
-                                    <img class=" img-fluid w-50" src="icons/image 12.png">
-                                </div>
-                                <div>
-                                    <h2>Find the Perfect Fit</h2>
-                                    <p>Everybody is different, which is why we
-                                        offer styles for every body.</p>
-                                </div>
-                            </div>
-                        </div><br>
-                        <div>
-                            <div class=" d-flex align-items-center justify-content-evenly rounded p-3 shadow bg-white">
-                                <div>
-                                    <img class=" img-fluid w-50" src="icons/image 12.png">
-                                </div>
-                                <div>
-                                    <h2>Find the Perfect Fit</h2>
-                                    <p>Everybody is different, which is why we
-                                        offer styles for every body.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col ">
-                        <img class=" img-fluid" src="icons/XMLID 1.png">
-                    </div>
-                </div>
-            </div>
-        </section> -->
+        
         
         <!-- last section -->
         <section class="mt-5" id="aboutus">
@@ -264,17 +218,32 @@
                     <img class=" img-fluid" src="icons/XMLID 1.png">
                   </div>
                 </div>
+                <!-----live toast------->
+
+              <button type="button" class="btn btn-primary my-5" id="liveToastBtn">Show live Events</button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <img src="icons/Logo.png" class="rounded me-2 w-25" alt="...">
+                            
+                            <small>11 mins ago</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Hello, world! anonymous buys nike shoes.
+                        </div>
+                    </div>
               </div>
+            </div>      
         </section>
 
-        <!------upcomming events---------->
-        <!-- <section class=" container">
-            <h2>Upcoming Events</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card">
-                        <img src="images/pngegg 1.png" class="card-img-top" alt="...">
-                      
+        <!----====upcoming events========-->
+
+        <section class="container">
+            <h2 class=" my-5">Upcoming Events</h2>
+            <div class="row g-4">
+                <div class="col col-12 col-md-6 col-lg-4">
+                    <div class="card">                     
                         <div class="card-body">
                           <h5 class="card-title">Blue Shoes</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -284,11 +253,10 @@
                         </div>
                         </div>
                       </div>
-                    </div>
                 </div>
-                <div class="col">
-                    <div class="card" >
-                        <img src="..." class="card-img-top" alt="...">
+                  
+                  <div class="col col-12 col-md-6 col-lg-4">
+                    <div class="card" aria-hidden="true">
                         <div class="card-body">
                           <h5 class="card-title placeholder-glow">
                             <span class="placeholder col-6"></span>
@@ -303,10 +271,9 @@
                           <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
                         </div>
                       </div>
-                </div>                           
-                <div class="col">
-                    <div class="card" >
-                        <img src="..." class="card-img-top" alt="...">
+                  </div>
+                  <div class="col col-12 col-md-6 col-lg-4">
+                    <div class="card" aria-hidden="true">
                         <div class="card-body">
                           <h5 class="card-title placeholder-glow">
                             <span class="placeholder col-6"></span>
@@ -318,13 +285,33 @@
                             <span class="placeholder col-6"></span>
                             <span class="placeholder col-8"></span>
                           </p>
-                          <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                          <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>   
                         </div>
                       </div>
-                </div>                           
+                    </div>
             </div>
-        </section> -->
-    
+
+            <!---pagination-->
+            
+            <div class=" my-3 ">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
     </main>
 
 
@@ -333,7 +320,17 @@
 
 
 
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+        toastTrigger.addEventListener('click', () => {
+            const toast = new bootstrap.Toast(toastLiveExample)
 
+            toast.show()
+        })
+        }
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
